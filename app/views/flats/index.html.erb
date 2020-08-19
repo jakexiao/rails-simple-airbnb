@@ -1,6 +1,12 @@
 <p>Simple Airbnb</p>
 <p> Add Flat <%= link_to "Add Flat", new_flat_path %></p>
 
+<%= form_tag(flats_path, :method => :get) do |f| %>
+    <%= text_field_tag :query %>
+    <%= submit_tag 'search' %>
+<% end %>
+
+
 <h1>All our Flats (<%= @flats.count %>)</h1>
 <% @flats.each do |flat|%>
     <div>  <%= flat.name %> </div>
