@@ -1,0 +1,15 @@
+<p>Simple Airbnb</p>
+<p> <%= link_to "Add Flat", new_flat_path %></p>
+
+<img src=<%= @flat.picture_url %> alt="A beautiful apartment"> 
+
+<h1> <%= @flat.name %> <h1>
+<p> <%= @flat.address %> </p>
+
+<h2> A bit more about this flat </h2>
+<p> <%= @flat.description %> </p> 
+
+<h2> Details </h2>
+<p> <%= @flat.number_of_guests %> $<%= @flat.price_per_night %> </p> 
+
+<div> <%= link_to "Back to list", flats_path %> </div>
